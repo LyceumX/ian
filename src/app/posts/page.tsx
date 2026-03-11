@@ -1,0 +1,8 @@
+export default function PostsPage() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-black text-white">
+      <h1 className="text-4xl font-bold mb-8">Blog Posts</h1>
+      <p className="text-lg">Coming soon...</p>
+    </main>
+  );
+}
