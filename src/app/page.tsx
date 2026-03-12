@@ -70,7 +70,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="h-12 border-t flex items-center justify-center" style={{ borderColor: 'var(--border)', color: 'var(--text-secondary)' }}>
-        © 2026 Ian Xie
+        Project Ianfluencer, 2026
       </footer>
     </main>
   );
