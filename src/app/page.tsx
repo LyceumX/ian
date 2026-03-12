@@ -23,18 +23,9 @@ export default function Home() {
 
       {/* Content */}
       <div className="max-w-3xl mx-auto px-8 py-16">
-        <h1 className="text-4xl font-bold mb-8" style={{ color: 'var(--text-primary)' }}>
-          Welcome to Ian's Dev Blog
+        <h1 className="text-4xl font-bold mb-12" style={{ color: 'var(--text-primary)' }}>
+          Daily Posts
         </h1>
-
-        <p className="text-lg mb-8" style={{ color: 'var(--text-secondary)' }}>
-          Thoughts on code, development, and daily progress.
-        </p>
-
-        <div className="border-t pt-8 mb-8" style={{ borderColor: 'var(--border)' }}>
-          <h2 className="text-2xl font-semibold mb-6" style={{ color: 'var(--text-primary)' }}>
-            Recent Posts
-          </h2>
 
           {/* Day 2 Post */}
           <article className="mb-8">
