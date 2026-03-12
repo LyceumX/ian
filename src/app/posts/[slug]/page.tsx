@@ -1,7 +1,8 @@
 import Link from "next/link";
 
-export default function PostPage({ params }: { params: { slug: string } }) {
-  const isDay2 = params.slug === "day-2-building-the-machine";
+export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const isDay2 = slug === "day-2-building-the-machine";
 
   return (
     <main className="min-h-screen" style={{ backgroundColor: 'var(--background)' }}>
@@ -35,7 +36,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
           <h1 className="text-4xl font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
             {isDay2
               ? "Day 2 — Building the Machine"
-              : params.slug === "sample-post"
+              : slug === "sample-post"
               ? "Getting Started with Next.js 15"
               : "Building a Dev Blog Workflow"}
           </h1>
@@ -43,7 +44,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
           <div className="text-sm mb-8" style={{ color: 'var(--text-secondary)' }}>
             {isDay2
               ? "March 11, 2026 • 6 min read"
-              : params.slug === "sample-post"
+              : slug === "sample-post"
               ? "March 12, 2026 • 5 min read"
               : "March 11, 2026 • 8 min read"}
           </div>
