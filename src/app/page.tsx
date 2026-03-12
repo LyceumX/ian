@@ -36,6 +36,21 @@ export default function Home() {
             Recent Posts
           </h2>
 
+          {/* Day 2 Post */}
+          <article className="mb-8">
+            <Link href="/posts/day-2-building-the-machine" className="block">
+              <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--accent)' }}>
+                Day 2 — Building the Machine
+              </h3>
+              <p className="mb-2" style={{ color: 'var(--text-secondary)' }}>
+                Process scales better than heroics.
+              </p>
+              <div className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+                March 11, 2026 • 6 min read
+              </div>
+            </Link>
+          </article>
+
           {/* Sample Post */}
           <article className="mb-8">
             <Link href="/posts/sample-post" className="block">
@@ -47,21 +62,6 @@ export default function Home() {
               </p>
               <div className="text-sm" style={{ color: 'var(--text-secondary)' }}>
                 March 12, 2026 • 5 min read
-              </div>
-            </Link>
-          </article>
-
-          {/* Another Sample Post */}
-          <article className="mb-8">
-            <Link href="/posts/another-post" className="block">
-              <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--accent)' }}>
-                Building a Dev Blog Workflow
-              </h3>
-              <p className="mb-2" style={{ color: 'var(--text-secondary)' }}>
-                How we set up the Ianfluencer daily blog content workflow.
-              </p>
-              <div className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-                March 11, 2026 • 8 min read
               </div>
             </Link>
           </article>
