@@ -71,7 +71,48 @@ export default function Home() {
             Ian's Dev Blog
           </div>
         </div>
-        <div className="flex gap-6">
+        <div className="flex items-center gap-6">
+          {/* Filter Buttons in Nav */}
+          <div className="flex gap-3">
+            <button
+              onClick={() => setFilter("all")}
+              className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
+              style={{
+                backgroundColor: filter === "all" ? "var(--accent)" : "transparent",
+                borderColor: filter === "all" ? "var(--accent)" : "var(--border)",
+                color: filter === "all" ? "white" : "var(--text-secondary)",
+                border: filter === "all" ? "2px solid var(--accent)" : "2px solid var(--border)"
+              }}
+            >
+              All
+            </button>
+            <button
+              onClick={() => setFilter("dev-log")}
+              className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
+              style={{
+                backgroundColor: filter === "dev-log" ? "var(--accent)" : "transparent",
+                borderColor: filter === "dev-log" ? "var(--accent)" : "var(--border)",
+                color: filter === "dev-log" ? "white" : "var(--text-secondary)",
+                border: filter === "dev-log" ? "2px solid var(--accent)" : "2px solid var(--border)"
+              }}
+            >
+              Dev Log
+            </button>
+            <button
+              onClick={() => setFilter("reflections")}
+              className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
+              style={{
+                backgroundColor: filter === "reflections" ? "var(--accent)" : "transparent",
+                borderColor: filter === "reflections" ? "var(--accent)" : "var(--border)",
+                color: filter === "reflections" ? "white" : "var(--text-secondary)",
+                border: filter === "reflections" ? "2px solid var(--accent)" : "2px solid var(--border)"
+              }}
+            >
+              Reflections
+            </button>
+          </div>
+
+          {/* Other Nav Links */}
           <Link href="/posts" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
             Posts
           </Link>
@@ -86,49 +127,9 @@ export default function Home() {
 
       {/* Content */}
       <div className="max-w-3xl mx-auto px-8 py-16">
-        <h1 className="text-4xl font-bold mb-8" style={{ color: 'var(--text-primary)' }}>
+        <h1 className="text-4xl font-bold mb-12" style={{ color: 'var(--text-primary)' }}>
           All Posts
         </h1>
-
-        {/* Filter Buttons */}
-        <div className="flex gap-3 mb-12">
-          <button
-            onClick={() => setFilter("all")}
-            className="px-4 py-2 rounded-lg font-medium transition-colors"
-            style={{
-              backgroundColor: filter === "all" ? "var(--accent)" : "transparent",
-              borderColor: filter === "all" ? "var(--accent)" : "var(--border)",
-              color: filter === "all" ? "white" : "var(--text-secondary)",
-              border: filter === "all" ? "2px solid var(--accent)" : "2px solid var(--border)"
-            }}
-          >
-            All
-          </button>
-          <button
-            onClick={() => setFilter("dev-log")}
-            className="px-4 py-2 rounded-lg font-medium transition-colors"
-            style={{
-              backgroundColor: filter === "dev-log" ? "var(--accent)" : "transparent",
-              borderColor: filter === "dev-log" ? "var(--accent)" : "var(--border)",
-              color: filter === "dev-log" ? "white" : "var(--text-secondary)",
-              border: filter === "dev-log" ? "2px solid var(--accent)" : "2px solid var(--border)"
-            }}
-          >
-            Dev Log
-          </button>
-          <button
-            onClick={() => setFilter("reflections")}
-            className="px-4 py-2 rounded-lg font-medium transition-colors"
-            style={{
-              backgroundColor: filter === "reflections" ? "var(--accent)" : "transparent",
-              borderColor: filter === "reflections" ? "var(--accent)" : "var(--border)",
-              color: filter === "reflections" ? "white" : "var(--text-secondary)",
-              border: filter === "reflections" ? "2px solid var(--accent)" : "2px solid var(--border)"
-            }}
-          >
-            Reflections
-          </button>
-        </div>
 
         {/* Post List */}
         <div className="space-y-8">
