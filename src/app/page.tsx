@@ -30,6 +30,21 @@ export default function Home() {
           Daily Posts
         </h1>
 
+        {/* Day 3 Post */}
+        <article className="mb-8">
+          <Link href="/posts/day-3-the-foundation" className="block">
+            <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--accent)' }}>
+              Day 3 of Ianfluencer: The Foundation — Organizing Chaos Before Creating Order
+            </h3>
+            <p className="mb-2" style={{ color: 'var(--text-secondary)' }}>
+              Every project starts with chaos.
+            </p>
+            <div className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+              March 16, 2026 • 8 min read
+            </div>
+          </Link>
+        </article>
+
         {/* Day 2 Post */}
         <article className="mb-8">
           <Link href="/posts/day-2-building-the-machine" className="block">
