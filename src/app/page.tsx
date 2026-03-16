@@ -30,6 +30,21 @@ export default function Home() {
           Daily Posts
         </h1>
 
+        {/* The Ianfluencer Experiment (Manifesto) */}
+        <article className="mb-8">
+          <Link href="/posts/the-ianfluencer-experiment" className="block">
+            <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--accent)' }}>
+              The Ianfluencer Experiment: Building in Public at the Intersection of AI and Human Expertise
+            </h3>
+            <p className="mb-2" style={{ color: 'var(--text-secondary)' }}>
+              How do we integrate AI tools into our workflows in a way that amplifies our capabilities without eroding our expertise?
+            </p>
+            <div className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+              March 16, 2026 • 12 min read
+            </div>
+          </Link>
+        </article>
+
         {/* Day 3 Post */}
         <article className="mb-8">
           <Link href="/posts/day-3-the-foundation" className="block">
