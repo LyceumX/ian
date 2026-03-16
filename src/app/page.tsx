@@ -1,12 +1,72 @@
+'use client';
+
 import Link from "next/link";
+import { useState } from "react";
+
+type PostCategory = "all" | "dev-log" | "reflections";
+
+interface Post {
+  id: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+  category: PostCategory;
+  href: string;
+}
+
+const posts: Post[] = [
+  {
+    id: "the-ianfluencer-experiment",
+    title: "The Ianfluencer Experiment: Building in Public at the Intersection of AI and Human Expertise",
+    excerpt: "How do we integrate AI tools into our workflows in a way that amplifies our capabilities without eroding our expertise?",
+    date: "March 16, 2026",
+    readTime: "12 min read",
+    category: "reflections",
+    href: "/posts/the-ianfluencer-experiment"
+  },
+  {
+    id: "day-3-the-foundation",
+    title: "Day 3 of Ianfluencer: The Foundation — Organizing Chaos Before Creating Order",
+    excerpt: "Every project starts with chaos.",
+    date: "March 16, 2026",
+    readTime: "8 min read",
+    category: "dev-log",
+    href: "/posts/day-3-the-foundation"
+  },
+  {
+    id: "day-2-building-the-machine",
+    title: "Day 2 — Building the Machine",
+    excerpt: "Process scales better than heroics.",
+    date: "March 11, 2026",
+    readTime: "6 min read",
+    category: "dev-log",
+    href: "/posts/day-2-building-the-machine"
+  },
+  {
+    id: "sample-post",
+    title: "Getting Started with Next.js 15",
+    excerpt: "A quick guide to setting up Next.js 15 with TypeScript and Tailwind CSS.",
+    date: "March 12, 2026",
+    readTime: "5 min read",
+    category: "dev-log",
+    href: "/posts/sample-post"
+  }
+];
 
 export default function Home() {
+  const [filter, setFilter] = useState<PostCategory>("all");
+
+  const filteredPosts = filter === "all"
+    ? posts
+    : posts.filter(post => post.category === filter);
+
   return (
     <main className="min-h-screen" style={{ backgroundColor: 'var(--background)' }}>
       {/* Header */}
       <header className="h-16 border-b flex items-center justify-between px-8" style={{ borderColor: 'var(--border)' }}>
         <div className="flex items-center gap-3">
-          <img src="/ianfluencer-logo-v1-bold.png" alt="Ianfluencer Logo" className="h-8 w-8" />
+          <img src="/ianfluencer-logo-v1-bold.jpg" alt="Ianfluencer Logo" className="h-8 w-8" />
           <div className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
             Ian's Dev Blog
           </div>
@@ -26,69 +86,68 @@ export default function Home() {
 
       {/* Content */}
       <div className="max-w-3xl mx-auto px-8 py-16">
-        <h1 className="text-4xl font-bold mb-12" style={{ color: 'var(--text-primary)' }}>
-          Daily Posts
+        <h1 className="text-4xl font-bold mb-8" style={{ color: 'var(--text-primary)' }}>
+          All Posts
         </h1>
 
-        {/* The Ianfluencer Experiment (Manifesto) */}
-        <article className="mb-8">
-          <Link href="/posts/the-ianfluencer-experiment" className="block">
-            <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--accent)' }}>
-              The Ianfluencer Experiment: Building in Public at the Intersection of AI and Human Expertise
-            </h3>
-            <p className="mb-2" style={{ color: 'var(--text-secondary)' }}>
-              How do we integrate AI tools into our workflows in a way that amplifies our capabilities without eroding our expertise?
-            </p>
-            <div className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-              March 16, 2026 • 12 min read
-            </div>
-          </Link>
-        </article>
+        {/* Filter Buttons */}
+        <div className="flex gap-3 mb-12">
+          <button
+            onClick={() => setFilter("all")}
+            className="px-4 py-2 rounded-lg font-medium transition-colors"
+            style={{
+              backgroundColor: filter === "all" ? "var(--accent)" : "transparent",
+              borderColor: filter === "all" ? "var(--accent)" : "var(--border)",
+              color: filter === "all" ? "white" : "var(--text-secondary)",
+              border: filter === "all" ? "2px solid var(--accent)" : "2px solid var(--border)"
+            }}
+          >
+            All
+          </button>
+          <button
+            onClick={() => setFilter("dev-log")}
+            className="px-4 py-2 rounded-lg font-medium transition-colors"
+            style={{
+              backgroundColor: filter === "dev-log" ? "var(--accent)" : "transparent",
+              borderColor: filter === "dev-log" ? "var(--accent)" : "var(--border)",
+              color: filter === "dev-log" ? "white" : "var(--text-secondary)",
+              border: filter === "dev-log" ? "2px solid var(--accent)" : "2px solid var(--border)"
+            }}
+          >
+            Dev Log
+          </button>
+          <button
+            onClick={() => setFilter("reflections")}
+            className="px-4 py-2 rounded-lg font-medium transition-colors"
+            style={{
+              backgroundColor: filter === "reflections" ? "var(--accent)" : "transparent",
+              borderColor: filter === "reflections" ? "var(--accent)" : "var(--border)",
+              color: filter === "reflections" ? "white" : "var(--text-secondary)",
+              border: filter === "reflections" ? "2px solid var(--accent)" : "2px solid var(--border)"
+            }}
+          >
+            Reflections
+          </button>
+        </div>
 
-        {/* Day 3 Post */}
-        <article className="mb-8">
-          <Link href="/posts/day-3-the-foundation" className="block">
-            <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--accent)' }}>
-              Day 3 of Ianfluencer: The Foundation — Organizing Chaos Before Creating Order
-            </h3>
-            <p className="mb-2" style={{ color: 'var(--text-secondary)' }}>
-              Every project starts with chaos.
-            </p>
-            <div className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-              March 16, 2026 • 8 min read
-            </div>
-          </Link>
-        </article>
-
-        {/* Day 2 Post */}
-        <article className="mb-8">
-          <Link href="/posts/day-2-building-the-machine" className="block">
-            <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--accent)' }}>
-              Day 2 — Building the Machine
-            </h3>
-            <p className="mb-2" style={{ color: 'var(--text-secondary)' }}>
-              Process scales better than heroics.
-            </p>
-            <div className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-              March 11, 2026 • 6 min read
-            </div>
-          </Link>
-        </article>
-
-        {/* Sample Post */}
-        <article className="mb-8">
-          <Link href="/posts/sample-post" className="block">
-            <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--accent)' }}>
-              Getting Started with Next.js 15
-            </h3>
-            <p className="mb-2" style={{ color: 'var(--text-secondary)' }}>
-              A quick guide to setting up Next.js 15 with TypeScript and Tailwind CSS.
-            </p>
-            <div className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-              March 12, 2026 • 5 min read
-            </div>
-          </Link>
-        </article>
+        {/* Post List */}
+        <div className="space-y-8">
+          {filteredPosts.map(post => (
+            <article key={post.id}>
+              <Link href={post.href} className="block">
+                <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--accent)' }}>
+                  {post.title}
+                </h3>
+                <p className="mb-2" style={{ color: 'var(--text-secondary)' }}>
+                  {post.excerpt}
+                </p>
+                <div className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+                  {post.date} • {post.readTime}
+                </div>
+              </Link>
+            </article>
+          ))}
+        </div>
       </div>
 
       {/* Footer */}
