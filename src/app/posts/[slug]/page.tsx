@@ -8,10 +8,13 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     <main className="min-h-screen" style={{ backgroundColor: 'var(--background)' }}>
       {/* Header */}
       <header className="h-16 border-b flex items-center justify-between px-8" style={{ borderColor: 'var(--border)' }}>
-        <div className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
-          <Link href="/" className="hover:opacity-75">
-            Ian's Dev Blog
-          </Link>
+        <div className="flex items-center gap-3">
+          <img src="/ianfluencer-logo-v1-bold.png" alt="Ianfluencer Logo" className="h-8 w-8" />
+          <div className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
+            <Link href="/" className="hover:opacity-75">
+              Ian's Dev Blog
+            </Link>
+          </div>
         </div>
         <div className="flex gap-6">
           <Link href="/posts" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
