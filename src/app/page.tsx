@@ -76,10 +76,10 @@ export default function Home() {
               onClick={() => setFilter("reflections")}
               className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
               style={{
-                backgroundColor: filter === "reflections" ? "var(--accent)" : "transparent",
-                borderColor: filter === "reflections" ? "var(--accent)" : "var(--border)",
+                backgroundColor: filter === "reflections" ? "#3B82F6" : "transparent",
+                borderColor: filter === "reflections" ? "#3B82F6" : "var(--border)",
                 color: filter === "reflections" ? "white" : "var(--text-secondary)",
-                border: filter === "reflections" ? "2px solid var(--accent)" : "2px solid var(--border)"
+                border: filter === "reflections" ? "2px solid #3B82F6" : "2px solid var(--border)"
               }}
             >
               Reflections
@@ -122,8 +122,7 @@ export default function Home() {
                 <h3 
                   className="text-xl font-semibold mb-2"
                   style={{ 
-                    color: post.category === 'reflections' ? '#4FD1C5' : 'var(--accent)',
-                    fontStyle: post.category === 'reflections' ? 'italic' : 'normal'
+                    color: post.category === 'reflections' ? '#3B82F6' : 'var(--accent)'
                   }}
                 >
                   {post.title}
