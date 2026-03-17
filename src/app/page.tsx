@@ -72,7 +72,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex items-center gap-6">
-          {/* Filter Buttons in Nav */}
+          {/* Filter Buttons replacing Posts link */}
           <div className="flex gap-3">
             <button
               onClick={() => setFilter("all")}
@@ -112,10 +112,7 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Other Nav Links */}
-          <Link href="/posts" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
-            Posts
-          </Link>
+          {/* Other Nav Links (removed Posts link) */}
           <Link href="/about" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
             About
           </Link>
@@ -128,7 +125,7 @@ export default function Home() {
       {/* Content */}
       <div className="max-w-3xl mx-auto px-8 py-16">
         <h1 className="text-4xl font-bold mb-12" style={{ color: 'var(--text-primary)' }}>
-          All Posts
+          {filter === "all" ? "All Posts" : filter === "dev-log" ? "Dev Log" : "Reflections"}
         </h1>
 
         {/* Post List */}
