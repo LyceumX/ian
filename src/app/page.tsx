@@ -119,7 +119,13 @@ export default function Home() {
           {filteredPosts.map(post => (
             <article key={post.id}>
               <Link href={post.href} className="block">
-                <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--accent)' }}>
+                <h3 
+                  className="text-xl font-semibold mb-2"
+                  style={{ 
+                    color: post.category === 'reflections' ? '#4FD1C5' : 'var(--accent)',
+                    fontStyle: post.category === 'reflections' ? 'italic' : 'normal'
+                  }}
+                >
                   {post.title}
                 </h3>
                 <p className="mb-2" style={{ color: 'var(--text-secondary)' }}>
