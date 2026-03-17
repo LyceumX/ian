@@ -17,6 +17,15 @@ interface Post {
 
 const posts: Post[] = [
   {
+    id: "the-ianfluencer-experiment",
+    title: "The Ianfluencer Experiment: Building in Public at the Intersection of AI and Human Expertise",
+    excerpt: "How do we integrate AI tools into our workflows in a way that amplifies our capabilities without eroding our expertise?",
+    date: "March 16, 2026",
+    readTime: "12 min read",
+    category: "reflections",
+    href: "/about"
+  },
+  {
     id: "day-3-the-foundation",
     title: "Day 3 — Organizing Chaos Before Creating Order",
     excerpt: "Every project starts with chaos.",
