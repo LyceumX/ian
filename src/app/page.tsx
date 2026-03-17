@@ -18,7 +18,7 @@ interface Post {
 const posts: Post[] = [
   {
     id: "day-3-the-foundation",
-    title: "Day 3 of Ianfluencer: The Foundation — Organizing Chaos Before Creating Order",
+    title: "Day 3 — Organizing Chaos Before Creating Order",
     excerpt: "Every project starts with chaos.",
     date: "March 16, 2026",
     readTime: "8 min read",
