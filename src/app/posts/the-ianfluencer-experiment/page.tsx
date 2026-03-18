@@ -6,23 +6,39 @@ export default function ManifestoPostPage() {
       {/* Header */}
       <header className="h-16 border-b flex items-center justify-between px-8" style={{ borderColor: 'var(--border)' }}>
         <div className="flex items-center gap-3">
-          <img src="/ianfluencer-logo-v1-bold.jpg" alt="Ianfluencer Logo" className="h-8 w-8" />
+          <img src="/ianfluencer-logo-v1-bold.png" alt="Ianfluencer Logo" className="h-8 w-8" />
           <div className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
-            <Link href="/" className="hover:opacity-75">
-              Ian's Dev Blog
-            </Link>
+            Project Ianfluencer
           </div>
         </div>
-        <div className="flex gap-6">
-          <Link href="/posts" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
-            Posts
-          </Link>
-          <Link href="/about" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
-            About
-          </Link>
+        <div className="flex items-center gap-6">
+          {/* Filter Buttons (just links since it's a post page) */}
+          <div className="flex gap-3">
+            <Link href="/" className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors" style={{ color: 'var(--text-secondary)' }}>
+              Reflections
+            </Link>
+            <Link href="/" className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors" style={{ color: 'var(--text-secondary)' }}>
+              Dev Log
+            </Link>
+          </div>
+
+          {/* Other Nav Links */}
           <a href="https://github.com/LyceumX" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
             GitHub
           </a>
+          <Link href="/about" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
+            About
+          </Link>
+          {/* EN/CN Toggle Button: Default to "CN" (shows English content by default) */}
+          <button
+            className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors border-2"
+            style={{
+              borderColor: 'var(--border)',
+              color: 'var(--text-secondary)'
+            }}
+          >
+            CN
+          </button>
         </div>
       </header>
 

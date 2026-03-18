@@ -29,6 +29,16 @@ export default function Day3PostPage() {
           <Link href="/about" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
             About
           </Link>
+          {/* EN/CN Toggle Button: Default to "CN" (shows English content by default) */}
+          <button
+            className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors border-2"
+            style={{
+              borderColor: 'var(--border)',
+              color: 'var(--text-secondary)'
+            }}
+          >
+            CN
+          </button>
         </div>
       </header>
 

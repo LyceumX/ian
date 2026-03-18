@@ -29,6 +29,16 @@ export default function AboutPage() {
           <Link href="/about" className="px-3 py-1.5 rounded-lg text-sm font-medium" style={{ backgroundColor: 'var(--accent)', color: 'white' }}>
             About
           </Link>
+          {/* EN/CN Toggle Button: Default to "CN" (shows English content by default) */}
+          <button
+            className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors border-2"
+            style={{
+              borderColor: 'var(--border)',
+              color: 'var(--text-secondary)'
+            }}
+          >
+            CN
+          </button>
         </div>
       </header>
 
