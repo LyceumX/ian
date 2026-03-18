@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 type PostCategory = "dev-log" | "reflections";
+type Language = "en" | "zh";
 
 interface Post {
   id: string;
@@ -81,6 +82,7 @@ const posts: Post[] = [
 
 export default function Home() {
   const [filter, setFilter] = useState<PostCategory>("dev-log");
+  const [language, setLanguage] = useState<Language>("en");
 
   const filteredPosts = posts.filter(post => post.category === filter);
 
@@ -132,13 +134,14 @@ export default function Home() {
           </a>
           {/* EN/CN Toggle Button: Default to "CN" (shows English content by default) */}
           <button
+            onClick={() => setLanguage(language === "en" ? "zh" : "en")}
             className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors border-2"
             style={{
               borderColor: 'var(--border)',
               color: 'var(--text-secondary)'
             }}
           >
-            CN
+            {language === "en" ? "CN" : "EN"}
           </button>
         </div>
       </header>
