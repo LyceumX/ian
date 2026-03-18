@@ -144,14 +144,17 @@ export default function Home() {
           {filteredPosts.map((post, index) => (
             <article key={post.id} className={index === 0 ? 'mb-12' : ''}>
               <Link href={post.href} className="block">
-                {/* Show thumbnail and body preview only for first post */}
-                {index === 0 && post.thumbnail && (
+                {/* Show thumbnail for first post if available */}
+                {index === 0 && post.thumbnail ? (
                   <img 
                     src={post.thumbnail} 
                     alt={post.title} 
                     className="w-full mb-6 rounded-lg"
                   />
-                )}
+                ) : index === 0 ? (
+                  /* Add top spacing if no thumbnail to keep layout consistent */
+                  <div className="mb-6" />
+                ) : null}
                 <h3 
                   className={index === 0 ? 'text-3xl font-bold mb-4' : 'text-xl font-semibold mb-2'}
                   style={{ 
@@ -160,7 +163,7 @@ export default function Home() {
                 >
                   {post.title}
                 </h3>
-                {/* Show body preview only for first post */}
+                {/* Show body preview for first post if available */}
                 {index === 0 && post.bodyPreview && (
                   <p className="mb-4 text-lg" style={{ color: 'var(--text-primary)' }}>
                     {post.bodyPreview}
