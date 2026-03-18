@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Header from "../components/Header";
 
 type PostCategory = "dev-log" | "reflections";
-type Language = "en" | "zh";
 
 interface Post {
   id: string;
@@ -82,69 +82,17 @@ const posts: Post[] = [
 
 export default function Home() {
   const [filter, setFilter] = useState<PostCategory>("dev-log");
-  const [language, setLanguage] = useState<Language>("en");
 
   const filteredPosts = posts.filter(post => post.category === filter);
 
   return (
     <main className="min-h-screen" style={{ backgroundColor: 'var(--background)' }}>
       {/* Header */}
-      <header className="h-16 border-b flex items-center justify-between px-8" style={{ borderColor: 'var(--border)' }}>
-        <div className="flex items-center gap-3">
-          <img src="/ianfluencer-logo-v1-bold.png" alt="Ianfluencer Logo" className="h-8 w-8" />
-          <div className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
-            Project Ianfluencer
-          </div>
-        </div>
-        <div className="flex items-center gap-6">
-          {/* Filter Buttons: Reflections first, then Dev Log */}
-          <div className="flex gap-3">
-            <button
-              onClick={() => setFilter("reflections")}
-              className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
-              style={{
-                backgroundColor: filter === "reflections" ? "#3B82F6" : "transparent",
-                borderColor: filter === "reflections" ? "#3B82F6" : "var(--border)",
-                color: filter === "reflections" ? "white" : "var(--text-secondary)",
-                border: filter === "reflections" ? "2px solid #3B82F6" : "2px solid var(--border)"
-              }}
-            >
-              Reflections
-            </button>
-            <button
-              onClick={() => setFilter("dev-log")}
-              className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
-              style={{
-                backgroundColor: filter === "dev-log" ? "var(--accent)" : "transparent",
-                borderColor: filter === "dev-log" ? "var(--accent)" : "var(--border)",
-                color: filter === "dev-log" ? "white" : "var(--text-secondary)",
-                border: filter === "dev-log" ? "2px solid var(--accent)" : "2px solid var(--border)"
-              }}
-            >
-              Dev Log
-            </button>
-          </div>
-
-          {/* Other Nav Links: GitHub first, then About, then EN/CN toggle */}
-          <a href="https://github.com/LyceumX" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
-            GitHub
-          </a>
-          <Link href="/about" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
-            About
-          </a>
-          {/* EN/CN Toggle Button: Default to "CN" (shows English content by default) */}
-          <button
-            onClick={() => setLanguage(language === "en" ? "zh" : "en")}
-            className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors border-2"
-            style={{
-              borderColor: 'var(--border)',
-              color: 'var(--text-secondary)'
-            }}
-          >
-            {language === "en" ? "CN" : "EN"}
-          </button>
-        </div>
-      </header>
+      <Header 
+        showFilters 
+        activeFilter={filter} 
+        onFilterChange={setFilter}
+      />
 
       {/* Content */}
       <div className="max-w-3xl mx-auto px-8 py-16">
