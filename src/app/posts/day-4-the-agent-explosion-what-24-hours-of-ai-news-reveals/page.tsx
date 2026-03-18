@@ -29,7 +29,7 @@ export default function Day4PostPage() {
             March 17, 2026
           </div>
 
-          <div className="prose" style={{ color: categoryColor }}>
+          <div className="prose" style={{ color: 'var(--text-primary)' }}>
             <p className="mb-4">
               <em>Yesterday felt like a month in the AI world.</em>
             </p>

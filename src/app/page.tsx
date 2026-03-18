@@ -51,6 +51,17 @@ const posts: Post[] = [
     href: "/about"
   },
   {
+    id: "day-5-the-system-comes-alive",
+    title: "Day 5: The System Comes Alive",
+    excerpt: "When the infrastructure finally clicks into place.",
+    date: "March 18, 2026",
+    readTime: "10 min read",
+    category: "dev-log",
+    href: "/posts/day-5-the-system-comes-alive",
+    thumbnail: "/day5-system-comes-alive-featured.png",
+    bodyPreview: "There's a moment in every project when the chaos starts to feel like order. When the systems you've been building in the abstract suddenly become real, tangible, working."
+  },
+  {
     id: "day-3-the-foundation",
     title: "Day 3 — Organizing Chaos Before Creating Order",
     excerpt: "Every project starts with chaos.",

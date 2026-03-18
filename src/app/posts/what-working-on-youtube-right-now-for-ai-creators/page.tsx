@@ -24,7 +24,7 @@ export default function YouTubePostPage() {
             March 17, 2026
           </div>
 
-          <div className="prose" style={{ color: categoryColor }}>
+          <div className="prose" style={{ color: 'var(--text-primary)' }}>
             <p className="mb-4">
               Last night, I pulled the trending data for AI creator content on YouTube. Not the "what's popular" surface-level stuff — the actual numbers. Views, CTRs, engagement patterns, keyword volumes, competitive gaps.
             </p>
