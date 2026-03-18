@@ -56,7 +56,8 @@ const posts: Post[] = [
     date: "March 16, 2026",
     readTime: "8 min read",
     category: "dev-log",
-    href: "/posts/day-3-the-foundation"
+    href: "/posts/day-3-the-foundation",
+    bodyPreview: "Every project starts with chaos. Not the romantic, artistic kind — the messy, disorganized kind that comes from moving fast, trying things, and accumulating files faster than you can organize them. Today was about facing that chaos head-on."
   },
   {
     id: "day-2-building-the-machine",
