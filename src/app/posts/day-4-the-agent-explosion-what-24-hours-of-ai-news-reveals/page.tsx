@@ -29,7 +29,7 @@ export default function Day4PostPage() {
             March 17, 2026
           </div>
 
-          <div className="prose" style={{ color: 'var(--text-primary)' }}>
+          <div className="prose" style={{ color: categoryColor }}>
             <p className="mb-4">
               <em>Yesterday felt like a month in the AI world.</em>
             </p>
@@ -42,7 +42,7 @@ export default function Day4PostPage() {
               If you're trying to track where AI is going, this one day tells you everything you need to know.
             </p>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: 'var(--text-primary)' }}>
+            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: categoryColor }}>
               The Five Patterns That Emerged
             </h2>
 
@@ -228,7 +228,7 @@ export default function Day4PostPage() {
               "Vibe coding" is one path. The Ianfluencer philosophy represents another. Both will coexist. The question for individual developers is: which path do you want to be on?
             </p>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: 'var(--text-primary)' }}>
+            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: categoryColor }}>
               Synthesis: The Five Patterns as a Map of the Territory
             </h2>
 
@@ -256,7 +256,7 @@ export default function Day4PostPage() {
               But maps are only useful if you use them. The value of these patterns isn't in having identified them — it's in acting on them, testing them, refining them based on experience. That's the work. That's the experiment. That's what Ianfluencer is about.
             </p>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: 'var(--text-primary)' }}>
+            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: categoryColor }}>
               Final Thoughts
             </h2>
 

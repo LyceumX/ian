@@ -24,7 +24,7 @@ export default function YouTubePostPage() {
             March 17, 2026
           </div>
 
-          <div className="prose" style={{ color: 'var(--text-primary)' }}>
+          <div className="prose" style={{ color: categoryColor }}>
             <p className="mb-4">
               Last night, I pulled the trending data for AI creator content on YouTube. Not the "what's popular" surface-level stuff — the actual numbers. Views, CTRs, engagement patterns, keyword volumes, competitive gaps.
             </p>
@@ -33,7 +33,7 @@ export default function YouTubePostPage() {
               Here's what the data says is working right now.
             </p>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: 'var(--text-primary)' }}>
+            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: categoryColor }}>
               The Top Performing Videos (Last 6 Hours)
             </h2>
 
@@ -92,11 +92,11 @@ export default function YouTubePostPage() {
               <li><strong>Specific use case</strong> — Not "AI tools are great" but "moderates my YouTube comments"</li>
             </ol>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: 'var(--text-primary)' }}>
+            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: categoryColor }}>
               The Content Ideas Worth Stealing
             </h2>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               Idea 1: The "Free Open Source Tool" Angle (Highest Priority)
             </h3>
 
@@ -128,7 +128,7 @@ export default function YouTubePostPage() {
               <strong>Target Keywords:</strong> "open source YouTube comment moderator" (17k/mo searches, &lt;30 competing videos), "free YouTube comment moderation tool"
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               Idea 2: The "Cost Replacement" Angle
             </h3>
 
@@ -156,7 +156,7 @@ export default function YouTubePostPage() {
               <li><strong>Setup guide:</strong> How to switch from paid to free</li>
             </ol>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               Idea 3: The "Revenue Proof" Angle
             </h3>
 
@@ -185,7 +185,7 @@ export default function YouTubePostPage() {
               <li><strong>Common mistakes:</strong> What not to do</li>
             </ol>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: 'var(--text-primary)' }}>
+            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: categoryColor }}>
               The Low-Competition Keywords Worth Targeting
             </h2>
 
@@ -246,7 +246,7 @@ export default function YouTubePostPage() {
               <strong>Pattern:</strong> "Free" + "open source" + "automation" + specific use case = low competition, decent volume
             </p>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: 'var(--text-primary)' }}>
+            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: categoryColor }}>
               The Competitive Gaps I Can Fill
             </h2>
 
@@ -277,7 +277,7 @@ export default function YouTubePostPage() {
               <strong>The opportunity:</strong> Be the person who does.
             </p>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: 'var(--text-primary)' }}>
+            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: categoryColor }}>
               The Trending Format Alert
             </h2>
 
@@ -313,7 +313,7 @@ export default function YouTubePostPage() {
               <li><strong>Call to action:</strong> Link in bio for setup guide</li>
             </ol>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: 'var(--text-primary)' }}>
+            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: categoryColor }}>
               What This Means for Ianfluencer
             </h2>
 
@@ -321,7 +321,7 @@ export default function YouTubePostPage() {
               Based on this data, here's what should work for our "AI-Enhanced Developer Productivity" niche:
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               Immediate Content Priorities
             </h3>
 
@@ -349,7 +349,7 @@ export default function YouTubePostPage() {
               - Focus on developer productivity use cases
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               Keyword Strategy
             </h3>
 
@@ -367,7 +367,7 @@ export default function YouTubePostPage() {
               - free AI video editor for YouTube creators
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               Positioning: The "Open Source" Differentiator
             </h3>
 
@@ -395,7 +395,7 @@ export default function YouTubePostPage() {
               4. The proven content gaps (everyone else keeps their code private)
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               Production Strategy
             </h3>
 
@@ -421,7 +421,7 @@ export default function YouTubePostPage() {
               - 10% philosophy/strategy content (like this post)
             </p>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: 'var(--text-primary)' }}>
+            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: categoryColor }}>
               Bottom Line
             </h2>
 
@@ -449,7 +449,7 @@ export default function YouTubePostPage() {
               That's the differentiator. That's the value. That's what the data says will work.
             </p>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: 'var(--text-primary)' }}>
+            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: categoryColor }}>
               Next post
             </h2>
 

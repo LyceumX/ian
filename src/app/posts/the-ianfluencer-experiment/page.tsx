@@ -24,8 +24,8 @@ export default function ManifestoPostPage() {
             March 16, 2026
           </div>
 
-          <div className="prose" style={{ color: 'var(--text-primary)' }}>
-            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: 'var(--text-primary)' }}>
+          <div className="prose" style={{ color: categoryColor }}>
+            <h2 className="text-2xl font-semibold mt-8 mb-4" style={{ color: categoryColor }}>
               Building in Public at the Intersection of AI and Human Expertise
             </h2>
 
