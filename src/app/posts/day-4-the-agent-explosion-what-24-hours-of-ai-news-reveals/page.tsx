@@ -1,50 +1,17 @@
 import Link from "next/link";
+import Header from "../../../components/Header";
 
 export default function Day4PostPage() {
+  const categoryColor = "#3B82F6"; // Reflections color
+
   return (
     <main className="min-h-screen" style={{ backgroundColor: 'var(--background)' }}>
       {/* Header */}
-      <header className="h-16 border-b flex items-center justify-between px-8" style={{ borderColor: 'var(--border)' }}>
-        <div className="flex items-center gap-3">
-          <img src="/ianfluencer-logo-v1-bold.png" alt="Ianfluencer Logo" className="h-8 w-8" />
-          <div className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
-            Project Ianfluencer
-          </div>
-        </div>
-        <div className="flex items-center gap-6">
-          {/* Filter Buttons (just links since it's a post page) */}
-          <div className="flex gap-3">
-            <Link href="/" className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors" style={{ color: 'var(--text-secondary)' }}>
-              Reflections
-            </Link>
-            <Link href="/" className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors" style={{ color: 'var(--text-secondary)' }}>
-              Dev Log
-            </Link>
-          </div>
-
-          {/* Other Nav Links */}
-          <a href="https://github.com/LyceumX" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
-            GitHub
-          </a>
-          <Link href="/about" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
-            About
-          </Link>
-          {/* EN/CN Toggle Button: Default to "CN" (shows English content by default) */}
-          <button
-            className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors border-2"
-            style={{
-              borderColor: 'var(--border)',
-              color: 'var(--text-secondary)'
-            }}
-          >
-            CN
-          </button>
-        </div>
-      </header>
+      <Header />
 
       {/* Content */}
       <div className="max-w-3xl mx-auto px-8 py-16">
-        <Link href="/" className="inline-block mb-8" style={{ color: 'var(--accent)' }}>
+        <Link href="/" className="inline-block mb-8" style={{ color: categoryColor }}>
           ← Back to Posts
         </Link>
 
@@ -54,7 +21,7 @@ export default function Day4PostPage() {
             alt="The Agent Explosion Featured Image" 
             className="w-full mb-8 rounded-lg"
           />
-          <h1 className="text-4xl font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
+          <h1 className="text-4xl font-bold mb-4" style={{ color: categoryColor }}>
             Reflection: The Agent Explosion — What 24 Hours of AI News Reveals About Where We're Headed
           </h1>
 
@@ -79,7 +46,7 @@ export default function Day4PostPage() {
               The Five Patterns That Emerged
             </h2>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               Pattern 1: The Shift from "Smart" to "Human"
             </h3>
 
@@ -95,7 +62,7 @@ export default function Day4PostPage() {
               For developers, this means something important: the tools are becoming less like "interfaces to intelligence" and more like "collaborators with personality." The technical capabilities matter, but so do the interaction patterns, the tone, the way the tool feels to work with.
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               Pattern 2: The Agent Infrastructure War
             </h3>
 
@@ -124,7 +91,7 @@ export default function Day4PostPage() {
               <li><strong>The skills that matter are shifting.</strong> Technical AI/ML knowledge is becoming commoditized. The differentiators are becoming: systems architecture (how do you design AI-powered workflows?), interaction design (how do humans collaborate with AI?), and strategic implementation (where does AI actually create value?).</li>
             </ol>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               Pattern 3: The Trust and Verification Problem
             </h3>
 
@@ -171,7 +138,7 @@ export default function Day4PostPage() {
               For Ianfluencer, this reinforces something important: the opportunity isn't just in building with AI tools. It's in thinking deeply about the human systems, workflows, and frameworks that make AI useful and trustworthy. The technical implementation is becoming commoditized. The value is in the thoughtful integration — the design of systems where humans and AI collaborate effectively.
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               Pattern 4: The Marketplace and Platform Play
             </h3>
 
@@ -218,7 +185,7 @@ export default function Day4PostPage() {
               The key is to stay focused on the core value proposition: <strong>practical AI integration for developers who want to stay sharp, not get replaced.</strong> The agent marketplace trend is one lens through which to explore that. But it's not the only lens, and it shouldn't become the entire focus.
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               Pattern 5: The "Vibe Coding" Phenomenon
             </h3>
 

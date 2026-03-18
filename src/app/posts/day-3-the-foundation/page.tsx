@@ -1,55 +1,22 @@
 import Link from "next/link";
+import Header from "../../../components/Header";
 
 export default function Day3PostPage() {
+  const categoryColor = "var(--accent)"; // Dev Log color (teal/cyan)
+
   return (
     <main className="min-h-screen" style={{ backgroundColor: 'var(--background)' }}>
       {/* Header */}
-      <header className="h-16 border-b flex items-center justify-between px-8" style={{ borderColor: 'var(--border)' }}>
-        <div className="flex items-center gap-3">
-          <img src="/ianfluencer-logo-v1-bold.png" alt="Ianfluencer Logo" className="h-8 w-8" />
-          <div className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
-            Project Ianfluencer
-          </div>
-        </div>
-        <div className="flex items-center gap-6">
-          {/* Filter Buttons (just links since it's a post page) */}
-          <div className="flex gap-3">
-            <Link href="/" className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors" style={{ color: 'var(--text-secondary)' }}>
-              Reflections
-            </Link>
-            <Link href="/" className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors" style={{ color: 'var(--text-secondary)' }}>
-              Dev Log
-            </Link>
-          </div>
-
-          {/* Other Nav Links */}
-          <a href="https://github.com/LyceumX" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
-            GitHub
-          </a>
-          <Link href="/about" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
-            About
-          </Link>
-          {/* EN/CN Toggle Button: Default to "CN" (shows English content by default) */}
-          <button
-            className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors border-2"
-            style={{
-              borderColor: 'var(--border)',
-              color: 'var(--text-secondary)'
-            }}
-          >
-            CN
-          </button>
-        </div>
-      </header>
+      <Header />
 
       {/* Content */}
       <div className="max-w-3xl mx-auto px-8 py-16">
-        <Link href="/" className="inline-block mb-8" style={{ color: 'var(--accent)' }}>
+        <Link href="/" className="inline-block mb-8" style={{ color: categoryColor }}>
           ← Back to Posts
         </Link>
 
         <article>
-          <h1 className="text-4xl font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
+          <h1 className="text-4xl font-bold mb-4" style={{ color: categoryColor }}>
             Day 3 — Organizing Chaos Before Creating Order
           </h1>
 
@@ -66,7 +33,7 @@ export default function Day3PostPage() {
               What Happened Today
             </h2>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               The Cleanup
             </h3>
 
@@ -93,7 +60,7 @@ export default function Day3PostPage() {
               The cleanup wasn't just about moving files around. We tackled the organizational debt that had accumulated over the first few days of rapid iteration:
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               ✅ Consolidated Scattered Documentation
             </h3>
 
@@ -101,7 +68,7 @@ export default function Day3PostPage() {
               Merged three separate docs into one comprehensive manual: <code>Ianfluencer-Manual.md</code> (8,000+ words). No more jumping between <code>SSOT.md</code>, <code>README.md</code>, and <code>Agent-Quick-Reference.md</code> to find what you need.
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               ✅ Cleaned Up the Tasks Folder
             </h3>
 
@@ -109,7 +76,7 @@ export default function Day3PostPage() {
               Removed duplicate tasks, fixed naming inconsistencies (Riti → Rity), and moved misplaced items like TSK-012 to the right location. The Kanban board now actually reflects reality.
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               ✅ Organized 97 Knowledge Base Files
             </h3>
 
@@ -117,7 +84,7 @@ export default function Day3PostPage() {
               Those scattered files are now categorized in <code>/KB/</code> by topic: AI-Tools, Best-Practices, Frameworks, Research, Workflows. What used to take 10 minutes to find now takes 10 seconds.
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               ✅ Fixed Infrastructure Issues
             </h3>
 
@@ -125,7 +92,7 @@ export default function Day3PostPage() {
               Emptied the <code>/Notes/OLD</code> folders that were creating confusion, verified n8n API access for automation, and cleaned up duplicate cron jobs that were running redundant checks.
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               ✅ Locked Content Niche Strategy
             </h3>
 
@@ -144,7 +111,7 @@ export default function Day3PostPage() {
               Why This Matters
             </h2>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               The Cost of Disorganization
             </h3>
 
@@ -156,7 +123,7 @@ export default function Day3PostPage() {
               It's death by a thousand cuts — 5 minutes here, 10 minutes there, until you've lost hours of productive work to friction that shouldn't exist.
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               The Power of Clear Structure
             </h3>
 
@@ -200,7 +167,7 @@ export default function Day3PostPage() {
               With the foundation in place, here's what's coming:
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               Tomorrow
             </h3>
 
@@ -210,7 +177,7 @@ export default function Day3PostPage() {
               <li>Draft first substantive blog post</li>
             </ul>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               This Week
             </h3>
 
@@ -220,7 +187,7 @@ export default function Day3PostPage() {
               <li>Set up dev blog infrastructure (Codi)</li>
             </ul>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               This Month
             </h3>
 
@@ -246,7 +213,7 @@ export default function Day3PostPage() {
               <strong>Day 3 takeaway:</strong> Invisible work enables visible results. The foundation determines whether everything else works.
             </p>
 
-            <blockquote className="border-l-4 border-gray-300 pl-4 italic mt-8" style={{ borderLeftColor: 'var(--accent)', color: 'var(--text-secondary)' }}>
+            <blockquote className="border-l-4 border-gray-300 pl-4 italic mt-8" style={{ borderLeftColor: categoryColor, color: 'var(--text-secondary)' }}>
               Progress happens when you build systems that make good work inevitable.
             </blockquote>
 

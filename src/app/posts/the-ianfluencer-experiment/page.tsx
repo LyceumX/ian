@@ -1,55 +1,22 @@
 import Link from "next/link";
+import Header from "../../../components/Header";
 
 export default function ManifestoPostPage() {
+  const categoryColor = "#3B82F6"; // Reflections color
+
   return (
     <main className="min-h-screen" style={{ backgroundColor: 'var(--background)' }}>
       {/* Header */}
-      <header className="h-16 border-b flex items-center justify-between px-8" style={{ borderColor: 'var(--border)' }}>
-        <div className="flex items-center gap-3">
-          <img src="/ianfluencer-logo-v1-bold.png" alt="Ianfluencer Logo" className="h-8 w-8" />
-          <div className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
-            Project Ianfluencer
-          </div>
-        </div>
-        <div className="flex items-center gap-6">
-          {/* Filter Buttons (just links since it's a post page) */}
-          <div className="flex gap-3">
-            <Link href="/" className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors" style={{ color: 'var(--text-secondary)' }}>
-              Reflections
-            </Link>
-            <Link href="/" className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors" style={{ color: 'var(--text-secondary)' }}>
-              Dev Log
-            </Link>
-          </div>
-
-          {/* Other Nav Links */}
-          <a href="https://github.com/LyceumX" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
-            GitHub
-          </a>
-          <Link href="/about" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
-            About
-          </Link>
-          {/* EN/CN Toggle Button: Default to "CN" (shows English content by default) */}
-          <button
-            className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors border-2"
-            style={{
-              borderColor: 'var(--border)',
-              color: 'var(--text-secondary)'
-            }}
-          >
-            CN
-          </button>
-        </div>
-      </header>
+      <Header />
 
       {/* Content */}
       <div className="max-w-3xl mx-auto px-8 py-16">
-        <Link href="/posts" className="inline-block mb-8" style={{ color: 'var(--accent)' }}>
+        <Link href="/" className="inline-block mb-8" style={{ color: categoryColor }}>
           ← Back to Posts
         </Link>
 
         <article>
-          <h1 className="text-4xl font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
+          <h1 className="text-4xl font-bold mb-4" style={{ color: categoryColor }}>
             The Ianfluencer Experiment
           </h1>
 
@@ -62,7 +29,7 @@ export default function ManifestoPostPage() {
               Building in Public at the Intersection of AI and Human Expertise
             </h2>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               The Question That Started It
             </h3>
 
@@ -106,7 +73,7 @@ export default function ManifestoPostPage() {
               This is the question that Ianfluencer exists to explore.
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               The Experiment
             </h3>
 
@@ -118,7 +85,7 @@ export default function ManifestoPostPage() {
               At its heart, Ianfluencer has three interlocking goals:
             </p>
 
-            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: 'var(--accent)' }}>
+            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: categoryColor }}>
               1. To Create Valuable Content
             </h4>
 
@@ -145,7 +112,7 @@ export default function ManifestoPostPage() {
               <li><strong>Career & Skill Development:</strong> Long-term career navigation with AI fluency</li>
             </ul>
 
-            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: 'var(--accent)' }}>
+            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: categoryColor }}>
               2. To Model a New Kind of Content Creation Workflow
             </h4>
 
@@ -161,7 +128,7 @@ export default function ManifestoPostPage() {
               The goal is to model a sustainable approach to content creation in the age of AI — one that uses these powerful tools responsibly and transparently.
             </p>
 
-            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: 'var(--accent)' }}>
+            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: categoryColor }}>
               3. To Learn in Public
             </h4>
 
@@ -173,7 +140,7 @@ export default function ManifestoPostPage() {
               This serves two purposes. First, it keeps me accountable — when you say you're going to do something publicly, you're more likely to follow through. Second, the process itself is valuable — seeing how someone navigates the learning curve, makes decisions, and iterates based on feedback is often more instructive than polished final products.
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               The Philosophy
             </h3>
 
@@ -181,7 +148,7 @@ export default function ManifestoPostPage() {
               At its core, Ianfluencer is built on a few foundational beliefs about the future of work, learning, and creativity in the age of AI:
             </p>
 
-            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: 'var(--accent)' }}>
+            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: categoryColor }}>
               1. AI is a Multiplier, Not a Replacement
             </h4>
 
@@ -189,7 +156,7 @@ export default function ManifestoPostPage() {
               The goal isn't to use AI to do less thinking. It's to use AI to handle routine cognitive tasks — research, organization, synthesis, pattern recognition — so that humans can focus on higher-order work: judgment, framing, creative problem-solving, and meaningful communication.
             </p>
 
-            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: 'var(--accent)' }}>
+            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: categoryColor }}>
               2. Sustainability Beats Virality
             </h4>
 
@@ -197,7 +164,7 @@ export default function ManifestoPostPage() {
               The goal isn't to create content that blows up once and then fades. It's to build a sustainable practice — a system that produces valuable work consistently over time, compounding in value and audience as it goes.
             </p>
 
-            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: 'var(--accent)' }}>
+            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: categoryColor }}>
               3. Transparency Builds Trust
             </h4>
 
@@ -205,7 +172,7 @@ export default function ManifestoPostPage() {
               In an era of AI-generated content flooding every channel, transparency is a differentiator. Being clear about how content is made — what tools are used, what the process looks like, where human judgment enters — builds trust with an audience that's increasingly skeptical of generic, AI-slop content.
             </p>
 
-            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: 'var(--accent)' }}>
+            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: categoryColor }}>
               4. Systems Beat Goals
             </h4>
 
@@ -213,7 +180,7 @@ export default function ManifestoPostPage() {
               Rather than focusing on outcome goals ("get 10,000 subscribers"), the focus is on system goals ("publish one substantive piece per week"). You can't directly control outcomes, but you can control the systems that lead to outcomes — and over time, good systems produce good outcomes.
             </p>
 
-            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: 'var(--accent)' }}>
+            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: categoryColor }}>
               5. Learning is the Product
             </h4>
 
@@ -221,7 +188,7 @@ export default function ManifestoPostPage() {
               In a world where information is commoditized, the value isn't in <em>having</em> information — it's in <em>synthesizing</em> information, drawing connections, developing insights, and communicating those insights clearly. The learning process itself — the questions asked, the paths explored, the conclusions drawn — is the value being created.
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               What to Expect
             </h3>
 
@@ -229,7 +196,7 @@ export default function ManifestoPostPage() {
               If you follow along with Ianfluencer, here's what you can expect:
             </p>
 
-            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: 'var(--accent)' }}>
+            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: categoryColor }}>
               Substantive, Practical Content
             </h4>
 
@@ -237,7 +204,7 @@ export default function ManifestoPostPage() {
               Not clickbait. Not surface-level "listicles." Not breathless hype about the latest AI tool. Real, substantive content that helps you make better decisions about AI tooling and integrate those tools into sustainable, skill-preserving workflows.
             </p>
 
-            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: 'var(--accent)' }}>
+            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: categoryColor }}>
               Transparency About Process
             </h4>
 
@@ -245,7 +212,7 @@ export default function ManifestoPostPage() {
               I'll be clear about how content is made, what tools are used, and where human judgment enters the process. No pretending AI-generated content is human-written. No hiding the role of AI tools in the creation process. Full transparency.
             </p>
 
-            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: 'var(--accent)' }}>
+            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: categoryColor }}>
               Iteration and Improvement
             </h4>
 
@@ -253,7 +220,7 @@ export default function ManifestoPostPage() {
               The early content will be rougher. The systems will be less refined. Over time, both will improve — and you'll see that improvement happening in real-time, with explanations of what's being changed and why.
             </p>
 
-            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: 'var(--accent)' }}>
+            <h4 className="text-lg font-semibold mt-5 mb-2" style={{ color: categoryColor }}>
               Community and Conversation
             </h4>
 
@@ -261,7 +228,7 @@ export default function ManifestoPostPage() {
               This isn't a broadcast — it's a conversation. I want to hear from you: what's working, what's not, what questions you have, what topics you want covered. The content will evolve based on that feedback.
             </p>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: 'var(--accent)' }}>
+            <h3 className="text-xl font-semibold mt-6 mb-3" style={{ color: categoryColor }}>
               The Invitation
             </h3>
 

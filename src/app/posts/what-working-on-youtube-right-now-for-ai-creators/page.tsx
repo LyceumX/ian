@@ -1,55 +1,22 @@
 import Link from "next/link";
+import Header from "../../../components/Header";
 
 export default function YouTubePostPage() {
+  const categoryColor = "#3B82F6"; // Reflections color
+
   return (
     <main className="min-h-screen" style={{ backgroundColor: 'var(--background)' }}>
       {/* Header */}
-      <header className="h-16 border-b flex items-center justify-between px-8" style={{ borderColor: 'var(--border)' }}>
-        <div className="flex items-center gap-3">
-          <img src="/ianfluencer-logo-v1-bold.png" alt="Ianfluencer Logo" className="h-8 w-8" />
-          <div className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
-            Project Ianfluencer
-          </div>
-        </div>
-        <div className="flex items-center gap-6">
-          {/* Filter Buttons (just links since it's a post page) */}
-          <div className="flex gap-3">
-            <Link href="/" className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors" style={{ color: 'var(--text-secondary)' }}>
-              Reflections
-            </Link>
-            <Link href="/" className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors" style={{ color: 'var(--text-secondary)' }}>
-              Dev Log
-            </Link>
-          </div>
-
-          {/* Other Nav Links */}
-          <a href="https://github.com/LyceumX" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
-            GitHub
-          </a>
-          <Link href="/about" style={{ color: 'var(--text-secondary)' }} className="hover:opacity-75">
-            About
-          </Link>
-          {/* EN/CN Toggle Button: Default to "CN" (shows English content by default) */}
-          <button
-            className="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors border-2"
-            style={{
-              borderColor: 'var(--border)',
-              color: 'var(--text-secondary)'
-            }}
-          >
-            CN
-          </button>
-        </div>
-      </header>
+      <Header />
 
       {/* Content */}
       <div className="max-w-3xl mx-auto px-8 py-16">
-        <Link href="/" className="inline-block mb-8" style={{ color: 'var(--accent)' }}>
+        <Link href="/" className="inline-block mb-8" style={{ color: categoryColor }}>
           ← Back to Posts
         </Link>
 
         <article>
-          <h1 className="text-4xl font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
+          <h1 className="text-4xl font-bold mb-4" style={{ color: categoryColor }}>
             What's Working on YouTube Right Now for AI Creators
           </h1>
 
