@@ -13,12 +13,36 @@ interface Post {
   readTime: string;
   category: PostCategory;
   href: string;
+  thumbnail?: string;
+  bodyPreview?: string;
 }
 
 const posts: Post[] = [
   {
+    id: "day-4-the-agent-explosion-what-24-hours-of-ai-news-reveals",
+    title: "Reflection: The Agent Explosion — What 24 Hours of AI News Reveals About Where We're Headed",
+    excerpt: "From GPT-5.4's humanity to Nvidia's enterprise army, a single day shows us the future.",
+    date: "March 17, 2026",
+    readTime: "12 min read",
+    category: "reflections",
+    href: "/posts/day-4-the-agent-explosion-what-24-hours-of-ai-news-reveals",
+    thumbnail: "/Day-4-The-Agent-Explosion-What-24-Hours-of-AI-News-Reveals-featured.png",
+    bodyPreview: "Yesterday felt like a month in the AI world. In a single 24-hour window, we got: GPT-5.4's massive API adoption, Sam Altman talking about 'humanity' over raw intelligence, Andrew Ng launching a Stack Overflow for AI agents, Nvidia deploying an enterprise agent army with Adobe and Salesforce..."
+  },
+  {
+    id: "what-working-on-youtube-right-now-for-ai-creators",
+    title: "What's Working on YouTube Right Now for AI Creators",
+    excerpt: "A data-driven look at the content that's actually getting views.",
+    date: "March 17, 2026",
+    readTime: "15 min read",
+    category: "reflections",
+    href: "/posts/what-working-on-youtube-right-now-for-ai-creators",
+    thumbnail: "/What-Working-on-YouTube-Right-Now-for-AI-Creators-featured.png",
+    bodyPreview: "Last night, I pulled the trending data for AI creator content on YouTube. Not the 'what's popular' surface-level stuff — the actual numbers. Views, CTRs, engagement patterns, keyword volumes, competitive gaps."
+  },
+  {
     id: "the-ianfluencer-experiment",
-    title: "The-Manifesto-Why-Im-Building-in-Public",
+    title: "The Manifesto: Why I'm Building in Public",
     excerpt: "How do we integrate AI tools into our workflows in a way that amplifies our capabilities without eroding our expertise?",
     date: "March 16, 2026",
     readTime: "12 min read",
@@ -116,17 +140,31 @@ export default function Home() {
 
         {/* Post List */}
         <div className="space-y-8">
-          {filteredPosts.map(post => (
-            <article key={post.id}>
+          {filteredPosts.map((post, index) => (
+            <article key={post.id} className={index === 0 ? 'mb-12' : ''}>
               <Link href={post.href} className="block">
+                {/* Show thumbnail and body preview only for first post */}
+                {index === 0 && post.thumbnail && (
+                  <img 
+                    src={post.thumbnail} 
+                    alt={post.title} 
+                    className="w-full mb-6 rounded-lg"
+                  />
+                )}
                 <h3 
-                  className="text-xl font-semibold mb-2"
+                  className={index === 0 ? 'text-3xl font-bold mb-4' : 'text-xl font-semibold mb-2'}
                   style={{ 
                     color: post.category === 'reflections' ? '#3B82F6' : 'var(--accent)'
                   }}
                 >
                   {post.title}
                 </h3>
+                {/* Show body preview only for first post */}
+                {index === 0 && post.bodyPreview && (
+                  <p className="mb-4 text-lg" style={{ color: 'var(--text-primary)' }}>
+                    {post.bodyPreview}
+                  </p>
+                )}
                 <p className="mb-2" style={{ color: 'var(--text-secondary)' }}>
                   {post.excerpt}
                 </p>
