@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^7.0.6",
     "gray-matter": "^4.0.3",
     "next": "^15.2.9",
     "next-mdx-remote": "^6.0.0",
